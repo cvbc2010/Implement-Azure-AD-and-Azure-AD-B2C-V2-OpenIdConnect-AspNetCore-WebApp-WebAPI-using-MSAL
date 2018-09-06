@@ -1,0 +1,28 @@
+@using System.Security.Principal
+@if (User.Identity.IsAuthenticated)
+{
+<ul class="nav navbar-nav navbar-right">
+    <li class="navbar-text">Hello @User.Identity.Name!</li>
+    @if (ViewBag.isB2cUser != null && ViewBag.isB2cUser)
+    {
+    <li><a asp-area="" asp-controller="Account" asp-action="B2CSignOut">Sign out</a></li>
+    }
+    else
+    {
+    <li><a asp-area="" asp-controller="Account" asp-action="SignOut">Sign out</a></li>
+    }
+    
+</ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        
+        <li><a asp-area="" asp-controller="Account" asp-action="Signin">Sign in</a></li>
+        <li><a asp-area="" asp-controller="Account" asp-action="B2CSignIn">B2C Sign in</a></li>
+
+    </ul>
+
+    
+}
+    

@@ -3,3 +3,7 @@
 ################################################################################
 
 /TodoListService/bin/Debug/netcoreapp2.0
+/TodoListService/obj
+/TodoListWebApp/bin/Debug/netcoreapp2.0
+/TodoListWebApp/obj
+/.vs/AzureAd-AzureAdB2C
